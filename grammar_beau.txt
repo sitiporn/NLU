@@ -1,0 +1,14 @@
+S -> VP
+VP -> VB NP | VB NP PRT | VB PRT NP | VB PRT NP PP | VB NP PP | VB PP PP PP
+NP -> DT NN | DT NN NN | NN NN
+PRT -> RP
+NP ->  NN | DT NN | DT NN NN | NN NN | CO NNS | PRP
+PP -> IN NP
+VB -> "turn" | "swing" | "stop"| "speed"| "reduce" | "raise" | "pause" | "activate"| "increase" | "lower" | "dry" | "decrease" | "cool"
+DT -> "the"
+RP -> "on" |  "off" | "down" | "up"
+NN -> "air-condition" | "heat"| "swing"| "fan" | "temperature" | "air" | "humidity" | "mode" | "speed" | "room"
+IN -> "by" | "for" | "to" | "at" | "from" | "on" 
+CO -> "hey_num"
+NNS -> "degree" | "pm" | "am" | "o'clock"
+PRP -> "me"

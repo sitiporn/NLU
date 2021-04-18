@@ -35,9 +35,9 @@ class HeyAC:
                 'VB':[],
                 'NEG':[],
                 'JJ':[],
+                'USER': []
                 }
         
-
         if len(parse_trees) > 1:
             print('[WARNING] More than a single parse detected')
 
@@ -46,8 +46,10 @@ class HeyAC:
         for sub_tree in parse_tree.subtrees():
             label = sub_tree.label()
             if label in harvest.keys():
-                harvest[label] = sub_tree.leaves()
-
+                try:
+                    harvest[label] = list(sub_tree)[0].label()
+                except:
+                    harvest[label] = list(sub_tree)[0]
         return harvest
 
     def parse(self, text):

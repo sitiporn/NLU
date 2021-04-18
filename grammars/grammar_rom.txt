@@ -1,21 +1,6 @@
-#S1 -> NP VP
-#NP -> PROPERTY IN OBJECT | OBJECT PROPERTY | PROPERTY | OBJECT
-#OBJECT -> DT NN_OBJ | NN_OBJ
-#PROPERTY -> DT NN_PROP | NN_PROP
-#VP -> VBZ ADJP | VBZ NEG ADJP
-#ADJP -> RB JJ | JJ
-#NN_OBJ -> "fan" | "air" | "room"
-#NN_PROP -> "speed" | "temperature" | "humidity"
-#DT -> "the"
-#IN -> "of"
-#VBZ -> "is" | "feels"
-#RB -> "too" | "quite" | "very"
-#JJ -> "low" | "high" | "hot" | "cold" | "dry" | "humid" 
-#NEG -> "not"
-
 S -> NP VP
 NP -> PROPERTY IN OBJECT | OBJECT PROPERTY | PROPERTY | OBJECT
-OBJECT -> DT NN_OBJ | NN_OBJ
+OBJECT -> DT NN_OBJ | NN_OBJ | USER | DT USER
 PROPERTY -> DT NN_PROP | NN_PROP
 VP -> VBZ ADJP | VBZ NEG ADJP
 ADJP -> RB JJ | JJ
@@ -23,13 +8,22 @@ NN_OBJ -> FAN | ENVIRONMENT | AC
 NN_PROP -> SPEED | TEMPERATURE | HUMIDITY
 DT -> "the"
 IN -> "of"
-VBZ -> "is" | "feels"
-RB -> "too" | "quite" | "very"
-JJ -> "low" | "high" | "hot" | "cold" | "dry" | "humid" 
+VBZ -> BE | FEEL
+RB -> "too" | "quite" | "very" | "so"
+USER -> "i" | "dog" | "cat" 
+JJ -> "low" | "high" | HOT | COLD | DRY | HUMID | FAST | SLOW
 NEG -> "not"
 FAN -> "fan"
-ENVIRONMENT -> "environment" | "air" | "room"
-AC -> "AC" | "air conditioner" | "cooler"
+ENVIRONMENT -> "environment" | "air" | "room" | "it"
+AC -> "ac" | "air conditioner" | "cooler" | "air-conditioner"
 SPEED -> "speed"
 TEMPERATURE -> "temperature" | "heat" 
-HUMIDITY -> "humidity" 
+HUMIDITY -> "humidity"
+DRY -> "dry" | "dehydrated"
+HUMID -> "humid" | "damp"
+HOT -> "hot" | "burning" | "boiling"
+COLD -> "cold" | "icy" | "freezing"
+FAST -> "fast"
+SLOW -> "slow"
+BE -> "is" | "am" | "are"
+FEEL -> "feel" | "feels"

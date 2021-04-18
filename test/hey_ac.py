@@ -32,9 +32,9 @@ class HeyAC:
         harvest = {
                 'NN_PROP':None,
                 'NN_OBJ':None,
-                'VB':None,
+                'VBG':None,
                 'NEG':None,
-                'JJ':None,
+                'VALUE':None,
                 }
         
         if len(parse_trees) > 1:

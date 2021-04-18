@@ -2,20 +2,21 @@ S -> NP VP
 NP -> PROPERTY IN OBJECT | OBJECT PROPERTY | PROPERTY | OBJECT
 OBJECT -> DT NN_OBJ | NN_OBJ | USER | DT USER
 PROPERTY -> DT NN_PROP | NN_PROP
-VP -> VBZ ADJP | VBZ NEG ADJP
-ADJP -> RB JJ | JJ
-NN_OBJ -> FAN | ENVIRONMENT | AC
+VP -> VBZ ADJP | VBZ NEG ADJP | VBZ VBG | VBZ NEG VBG
+ADJP -> RB VALUE | VALUE
+NN_OBJ -> FAN | ENVIRONMENT | AC | SWING
 NN_PROP -> VOLUME | TEMPERATURE | HUMIDITY
 DT -> "the"
 IN -> "of"
 VBZ -> BE | FEEL
 RB -> "too" | "quite" | "very" | "so" 
 USER -> "i" | "dog" | "cat" 
-JJ -> LOW | HIGH | HOT | COLD | DRY | HUMID | FAST | SLOW | WEAK | STRONG
+VALUE -> LOW | HIGH | HOT | COLD | DRY | HUMID | FAST | SLOW | WEAK | STRONG
 NEG -> "not"
 FAN -> "fan"
+SWING -> "swing" | "flap"
 ENVIRONMENT -> "environment" | "air" | "room" | "it"
-AC -> "ac" | "air conditioner" | "cooler" | "air-conditioner"
+AC -> "ac" | "air conditioner" | "cooler" | "air-conditioner" | "it"
 VOLUME -> "volume" | "speed"
 TEMPERATURE -> "temperature" | "heat" 
 HUMIDITY -> "humidity"
@@ -31,3 +32,4 @@ WEAK -> "weak"
 STRONG -> "strong"
 LOW -> "low"
 HIGH -> "high"
+VBG -> "running" | "working" | "swinging" | "moving"

@@ -5,9 +5,9 @@ PROPERTY -> DT NN_PROP | NN_PROP
 VP -> VBZ ADJP | VBZ NEG ADJP | VBZ VBG | VBZ NEG VBG
 ADJP -> RB VALUE | VALUE
 NN_OBJ -> FAN | ENVIRONMENT | AC | SWING
-NN_PROP -> VOLUME | TEMPERATURE | HUMIDITY
+NN_PROP -> VOLUME | TEMPERATURE | HUMIDITY | BREEZE
 DT -> "the"
-IN -> "of"
+IN -> "of" | "from"
 VBZ -> BE | FEEL
 RB -> "too" | "quite" | "very" | "so" 
 USER -> "i" | "dog" | "cat" 
@@ -33,3 +33,4 @@ STRONG -> "strong"
 LOW -> "low"
 HIGH -> "high"
 VBG -> "running" | "working" | "swinging" | "moving"
+BREEZE -> "breeze" | "air" | "wind" 

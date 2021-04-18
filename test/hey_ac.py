@@ -30,12 +30,11 @@ class HeyAC:
         Prunes the important words from the parse tree
         '''
         harvest = {
-                'NN_PROP':[],
-                'NN_OBJ':[],
-                'VB':[],
-                'NEG':[],
-                'JJ':[],
-                'USER': []
+                'NN_PROP':None,
+                'NN_OBJ':None,
+                'VB':None,
+                'NEG':None,
+                'JJ':None,
                 }
         
         if len(parse_trees) > 1:
@@ -49,7 +48,7 @@ class HeyAC:
                 try:
                     harvest[label] = list(sub_tree)[0].label()
                 except:
-                    harvest[label] = list(sub_tree)[0]
+                    harvest[label] = list(sub_tree)[0].upper()
         return harvest
 
     def parse(self, text):

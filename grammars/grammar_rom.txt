@@ -5,18 +5,18 @@ PROPERTY -> DT NN_PROP | NN_PROP
 VP -> VBZ ADJP | VBZ NEG ADJP
 ADJP -> RB JJ | JJ
 NN_OBJ -> FAN | ENVIRONMENT | AC
-NN_PROP -> SPEED | TEMPERATURE | HUMIDITY
+NN_PROP -> VOLUME | TEMPERATURE | HUMIDITY
 DT -> "the"
 IN -> "of"
 VBZ -> BE | FEEL
-RB -> "too" | "quite" | "very" | "so"
+RB -> "too" | "quite" | "very" | "so" 
 USER -> "i" | "dog" | "cat" 
-JJ -> "low" | "high" | HOT | COLD | DRY | HUMID | FAST | SLOW
+JJ -> LOW | HIGH | HOT | COLD | DRY | HUMID | FAST | SLOW | WEAK | STRONG
 NEG -> "not"
 FAN -> "fan"
 ENVIRONMENT -> "environment" | "air" | "room" | "it"
 AC -> "ac" | "air conditioner" | "cooler" | "air-conditioner"
-SPEED -> "speed"
+VOLUME -> "volume" | "speed"
 TEMPERATURE -> "temperature" | "heat" 
 HUMIDITY -> "humidity"
 DRY -> "dry" | "dehydrated"
@@ -27,3 +27,7 @@ FAST -> "fast"
 SLOW -> "slow"
 BE -> "is" | "am" | "are"
 FEEL -> "feel" | "feels"
+WEAK -> "weak"
+STRONG -> "strong"
+LOW -> "low"
+HIGH -> "high"

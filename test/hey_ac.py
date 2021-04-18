@@ -30,14 +30,13 @@ class HeyAC:
         Prunes the important words from the parse tree
         '''
         harvest = {
-                'NN_PROP':[],
-                'NN_OBJ':[],
-                'VB':[],
-                'NEG':[],
-                'JJ':[],
+                'NN_PROP':None,
+                'NN_OBJ':None,
+                'VBG':None,
+                'NEG':None,
+                'VALUE':None,
                 }
         
-
         if len(parse_trees) > 1:
             print('[WARNING] More than a single parse detected')
 
@@ -46,8 +45,10 @@ class HeyAC:
         for sub_tree in parse_tree.subtrees():
             label = sub_tree.label()
             if label in harvest.keys():
-                harvest[label] = sub_tree.leaves()
-
+                try:
+                    harvest[label] = list(sub_tree)[0].label()
+                except:
+                    harvest[label] = list(sub_tree)[0].upper()
         return harvest
 
     def parse(self, text):
@@ -75,7 +76,7 @@ class HeyAC:
         processed_text, list_var = HeyAC._digit_to_dummy(processed_text)
         processed_text = TextBlob(processed_text)
         processed_text = processed_text.lower()
-        processed_text = processed_text.correct()
+        #processed_text = processed_text.correct()
         processed_text = str(processed_text)
 
         return processed_text, list_var

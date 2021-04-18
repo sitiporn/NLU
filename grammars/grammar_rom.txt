@@ -1,35 +1,36 @@
-#S1 -> NP VP
-#NP -> PROPERTY IN OBJECT | OBJECT PROPERTY | PROPERTY | OBJECT
-#OBJECT -> DT NN_OBJ | NN_OBJ
-#PROPERTY -> DT NN_PROP | NN_PROP
-#VP -> VBZ ADJP | VBZ NEG ADJP
-#ADJP -> RB JJ | JJ
-#NN_OBJ -> "fan" | "air" | "room"
-#NN_PROP -> "speed" | "temperature" | "humidity"
-#DT -> "the"
-#IN -> "of"
-#VBZ -> "is" | "feels"
-#RB -> "too" | "quite" | "very"
-#JJ -> "low" | "high" | "hot" | "cold" | "dry" | "humid" 
-#NEG -> "not"
-
 S -> NP VP
 NP -> PROPERTY IN OBJECT | OBJECT PROPERTY | PROPERTY | OBJECT
-OBJECT -> DT NN_OBJ | NN_OBJ
+OBJECT -> DT NN_OBJ | NN_OBJ | USER | DT USER
 PROPERTY -> DT NN_PROP | NN_PROP
-VP -> VBZ ADJP | VBZ NEG ADJP
-ADJP -> RB JJ | JJ
-NN_OBJ -> FAN | ENVIRONMENT | AC
-NN_PROP -> SPEED | TEMPERATURE | HUMIDITY
+VP -> VBZ ADJP | VBZ NEG ADJP | VBZ VBG | VBZ NEG VBG
+ADJP -> RB VALUE | VALUE
+NN_OBJ -> FAN | ENVIRONMENT | AC | SWING
+NN_PROP -> VOLUME | TEMPERATURE | HUMIDITY | BREEZE
 DT -> "the"
-IN -> "of"
-VBZ -> "is" | "feels"
-RB -> "too" | "quite" | "very"
-JJ -> "low" | "high" | "hot" | "cold" | "dry" | "humid" 
+IN -> "of" | "from"
+VBZ -> BE | FEEL
+RB -> "too" | "quite" | "very" | "so" 
+USER -> "i" | "dog" | "cat" 
+VALUE -> LOW | HIGH | HOT | COLD | DRY | HUMID | FAST | SLOW | WEAK | STRONG
 NEG -> "not"
 FAN -> "fan"
-ENVIRONMENT -> "environment" | "air" | "room"
-AC -> "AC" | "air conditioner" | "cooler"
-SPEED -> "speed"
+SWING -> "swing" | "flap"
+ENVIRONMENT -> "environment" | "air" | "room" | "it"
+AC -> "ac" | "air conditioner" | "air-conditioner" | "it"
+VOLUME -> "volume" | "speed"
 TEMPERATURE -> "temperature" | "heat" 
-HUMIDITY -> "humidity" 
+HUMIDITY -> "humidity"
+DRY -> "dry" | "dehydrated"
+HUMID -> "humid" | "damp"
+HOT -> "hot" | "burning" | "boiling"
+COLD -> "cold" | "icy" | "freezing"
+FAST -> "fast"
+SLOW -> "slow"
+BE -> "is" | "am" | "are"
+FEEL -> "feel" | "feels"
+WEAK -> "weak"
+STRONG -> "strong"
+LOW -> "low"
+HIGH -> "high"
+VBG -> "running" | "working" | "swinging" | "moving"
+BREEZE -> "breeze" | "air" | "wind" 

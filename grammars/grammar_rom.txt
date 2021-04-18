@@ -1,0 +1,14 @@
+S -> NP VP
+NP -> PROPERTY IN OBJECT | OBJECT PROPERTY | PROPERTY | OBJECT
+OBJECT -> DT NN_OBJ | NN_OBJ
+PROPERTY -> DT NN_PROP | NN_PROP
+VP -> VBZ ADJP | VBZ NEG ADJP
+ADJP -> RB JJ | JJ
+NN_OBJ -> "fan" | "air" | "room"
+NN_PROP -> "speed" | "temperature" | "humidity"
+DT -> "the"
+IN -> "of"
+VBZ -> "is" | "feels"
+RB -> "too" | "quite" | "very"
+JJ -> "low" | "high" | "hot" | "cold" | "dry" | "humid" 
+NEG -> "not"

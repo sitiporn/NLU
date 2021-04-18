@@ -76,7 +76,7 @@ class HeyAC:
         processed_text, list_var = HeyAC._digit_to_dummy(processed_text)
         processed_text = TextBlob(processed_text)
         processed_text = processed_text.lower()
-        processed_text = processed_text.correct()
+        #processed_text = processed_text.correct()
         processed_text = str(processed_text)
 
         return processed_text, list_var

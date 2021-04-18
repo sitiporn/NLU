@@ -24,12 +24,11 @@ class HeyAC:
         parse_trees = self._parse(processed_text)
         harvest = self._prune(parse_trees)
         return harvest 
-
+    
     def _prune(self, parse_trees):
         '''
         Prunes the important words from the parse tree
         '''
-
         harvest = {
                 'NN_PROP':[],
                 'NN_OBJ':[],
@@ -50,6 +49,11 @@ class HeyAC:
                 harvest[label] = sub_tree.leaves()
 
         return harvest
+
+    def parse(self, text):
+        processed_text, list_var = HeyAC._preprocess(text)
+        parse_trees = self._parse(processed_text)
+        return parse_trees
 
     def _parse(self, text):
         '''

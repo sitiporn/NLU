@@ -1,14 +1,22 @@
-S -> VP
-VP -> VB NP | VB NP PRT | VB PRT NP | VB PRT NP PP | VB NP PP | VB PP PP PP
-NP -> DT NN | DT NN NN | NN NN
-PRT -> RP
-NP ->  NN | DT NN | DT NN NN | NN NN | CO NNS | PRP
-PP -> IN NP
-VB -> "turn" | "swing" | "stop"| "speed"| "reduce" | "raise" | "pause" | "activate"| "increase" | "lower" | "dry" | "decrease" | "cool"
+S -> COMP | COMP  VARP 
+COMP -> ACT DIR NP | ACT NP DIR | ACT NP 
+VARP -> IN CO UNIT | IN CO UNIT IN CO UNIT | IN CO IN CO UNIT
+NP -> PROPERTY IN OBJECT | OBJECT PROPERTY| PROPERTY | OBJECT
+PROPERTY -> DT NN_PROP | NN_PROP
+OBJECT -> DT NN_OBJ | NN_OBJ
+NN_PROP -> TEMPERATURE | MODE | HUMIDITY | VOLUME
+NN_OBJ -> FAN | ENVIRONMENT | AC | SWING 
+ACT -> "turn" | "swing" | "speed" | "reduce" | "raise" | "pause" | "increase" | "decrease" | "activate" | "lower" | "dry" | "stop" | "cool"
+DIR -> "up" | "off" | "on" | "down" 
 DT -> "the"
-RP -> "on" |  "off" | "down" | "up"
-NN -> "air-condition" | "heat"| "swing"| "fan" | "temperature" | "air" | "humidity" | "mode" | "speed" | "room"
-IN -> "by" | "for" | "to" | "at" | "from" | "on" 
+TEMPERATURE -> "heat" | "temperature"
+MODE -> "mode"
+FAN -> "fan"
+AC -> "ac" | "air conditioner" | "air-conditioner" | "it" | "air"
+IN -> "by" | "at" | "from" | "to" 
 CO -> "hey_num"
-NNS -> "degree" | "pm" | "am" | "o'clock"
-PRP -> "me"
+UNIT -> "degrees" | "degree" | "am" | "a.m." | "pm" | "p.m." | "o'clock"
+HUMIDITY -> "humidity"
+ENVIRONMENT -> "room"
+SWING -> "swing" 
+VOLUME -> "volume" | "speed"

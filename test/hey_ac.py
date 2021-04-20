@@ -35,6 +35,9 @@ class HeyAC:
                 'VBG':None,
                 'NEG':None,
                 'VALUE':None,
+                'ACT':None,
+                'DIR':None,
+                'CO':None,
                 }
         
         if len(parse_trees) > 1:

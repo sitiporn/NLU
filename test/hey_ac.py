@@ -35,11 +35,10 @@ class HeyAC:
                 'VBG':None,
                 'NEG':None,
                 'VALUE':None,
-                'ACT':None,
+                'ACT':None,  
                 'DIR':None,
                 'CO':None,
                 'VB':None,
-                'NN_PROP':None,
                 'VBG':None,
                 }
         

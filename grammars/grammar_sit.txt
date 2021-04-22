@@ -1,0 +1,15 @@
+S  -> VP
+VP -> VB NP | VB IN VBG MODE | VB IN NN_PROP MODE
+VB -> "set"
+NP -> DT  NN_PROP IN CO UNIT | DT  NN_PROP IN CO 
+VBG -> "cooling" | "heating"
+NN_PROP -> HUMIDITY | TEMPERATURE | COOL | HEAT 
+MODE -> "mode"
+DT -> "the"
+IN -> "to"
+CO -> "hey_num" 
+UNIT -> "degrees" | "degree" | "%"
+HUMIDITY -> "humidity"
+TEMPERATURE -> "temperature"
+COOL -> "cool"
+HEAT -> "heat"
